@@ -25,6 +25,11 @@ public class GameManager : MonoBehaviour
         {
             GameStart();
         }
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            ExitGame();
+        }
     }
 
     public void IncreaseScorePlayerLeft()
@@ -48,5 +53,11 @@ public class GameManager : MonoBehaviour
     private void GameStart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void ExitGame()
+    {
+        Application.Quit();
+        Debug.Log("Sair do jogo");
     }
 }
