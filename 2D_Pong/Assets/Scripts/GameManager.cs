@@ -12,7 +12,8 @@ public class GameManager : MonoBehaviour
     public AudioSource goal;
     void Start()
     {
-        Debug.Log("Start");
+        Cursor.visible = false;
+        
         pointsPlayerLeft = 0;
         pointsPlayerRight = 0;
         score.text = pointsPlayerLeft + " X " + pointsPlayerRight;
