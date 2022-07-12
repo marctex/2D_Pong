@@ -11,7 +11,7 @@ public class Points : MonoBehaviour
         if (pointsPlayerLeft)
         {
             FindObjectOfType<GameManager>().IncreaseScorePlayerRight();
-            other.gameObject.transform.position = Vector2.zero;
+            other.gameObject.transform.position = Vector2.zero;             //reseta a posição do objeto que colidiu, nesse caso a bola 
         }
         else
         {
