@@ -1,30 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public int scorePlayerLeft;
-    public int scorePlayerRight;
+    int scorePlayerLeft;
+    int scorePlayerRight;
+    public Text textScore;
+    public AudioSource soundGoal;
+
     void Start()
     {
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    }   
 
     public void IncreaseScorePlayerLeft()
     {
         scorePlayerLeft += 1;
+        AtualzaTexScore();        
     }
 
     public void IncreaseScorePlayerRight()
     {
         scorePlayerRight += 1;
+        AtualzaTexScore();        
+    }
+
+    public void AtualzaTexScore()
+    {
+        textScore.text = scorePlayerLeft + " X " + scorePlayerRight;
+        soundGoal.Play();
     }
 
 }
