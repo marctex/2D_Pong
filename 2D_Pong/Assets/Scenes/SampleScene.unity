@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 321694522}
   - component: {fileID: 321694521}
-  - component: {fileID: 321694520}
   - component: {fileID: 321694523}
   m_Layer: 0
   m_Name: GoalPlayerRight
@@ -142,20 +141,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &321694520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 321694519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d542ab3ec7ca896489f858aa644a7696, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textScore: {fileID: 0}
-  soundGoal: {fileID: 0}
 --- !u!61 &321694521
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -818,8 +803,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1503907474}
-  - component: {fileID: 1503907473}
   - component: {fileID: 1503907475}
+  - component: {fileID: 1503907476}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -827,20 +812,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1503907473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1503907472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d542ab3ec7ca896489f858aa644a7696, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textScore: {fileID: 1836889364}
-  soundGoal: {fileID: 1503907475}
 --- !u!4 &1503907474
 Transform:
   m_ObjectHideFlags: 0
@@ -848,7 +819,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503907472}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -952,6 +923,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1503907476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503907472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d542ab3ec7ca896489f858aa644a7696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsPlayerLeft: 0
+  pointsPlayerRight: 0
+  score: {fileID: 1836889364}
+  goal: {fileID: 1503907475}
 --- !u!1 &1635795730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,7 +1378,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 0 X 0
 --- !u!222 &1836889365
 CanvasRenderer:
   m_ObjectHideFlags: 0

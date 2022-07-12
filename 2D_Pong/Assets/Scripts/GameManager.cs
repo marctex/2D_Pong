@@ -5,32 +5,39 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    int scorePlayerLeft;
-    int scorePlayerRight;
-    public Text textScore;
-    public AudioSource soundGoal;
-
+    public int pointsPlayerLeft;
+    public int pointsPlayerRight;
+    public Text score;
+    public AudioSource goal;
     void Start()
     {
+        Debug.Log("Start");
+        pointsPlayerLeft = 0;
+        pointsPlayerRight = 0;
+        score.text = pointsPlayerLeft + " X " + pointsPlayerRight;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         
-    }   
+    }
 
     public void IncreaseScorePlayerLeft()
     {
-        scorePlayerLeft += 1;
-        AtualzaTexScore();        
+        pointsPlayerLeft += 1;
+        UpdateTextScore();
     }
 
     public void IncreaseScorePlayerRight()
     {
-        scorePlayerRight += 1;
-        AtualzaTexScore();        
+        pointsPlayerRight += 1;
+        UpdateTextScore();
     }
 
-    public void AtualzaTexScore()
+    public void UpdateTextScore()
     {
-        textScore.text = scorePlayerLeft + " X " + scorePlayerRight;
-        soundGoal.Play();
+        score.text = pointsPlayerLeft + " X " + pointsPlayerRight;
+        goal.Play();
     }
-
 }
